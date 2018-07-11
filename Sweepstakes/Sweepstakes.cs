@@ -34,13 +34,14 @@ namespace Sweepstakes
         {
 
             ui.GetContestantInfo(contestant);
-            Console.WriteLine($"{contestant.ContestantRegistrationNumber} has been registered.");
+            Console.WriteLine($"Contestant {contestant.ContestantRegistrationNumber} has been registered.");
 
         }
 
         public string PickWinner()
         {
-
+            Random randomRegisterNumber = new Random();
+            contestant.ContestantRegistrationNumber = randomRegisterNumber.Next(000, 004);
             
             string winner = contestant.ContestantRegistrationNumber.ToString();
             Console.WriteLine($"{winner} has won the drawing!");
