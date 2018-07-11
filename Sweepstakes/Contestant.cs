@@ -28,19 +28,19 @@ namespace Sweepstakes
             set => emailAddress = value;
 
         }
-        public string contestantFirstName
+        public string ContestantFirstName
         {
             get => firstName;
             set => firstName = value;
         }
 
-        public string contestantLastName
+        public string ContestantLastName
         {
             get => lastName;
             set => lastName = value;
         }
 
-        public int contestantRegistrationNumber
+        public int ContestantRegistrationNumber
         {
             get => registrationNumber;
             set => registrationNumber = value;
