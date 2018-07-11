@@ -21,10 +21,24 @@ namespace Sweepstakes
 
         Dictionary<string, int> contestantDraw = new Dictionary<string, int>();
 
-        public void SweepStakesName(string contestName)
+        public string SweepStakesName(string contestName)
         {
             ui.SweepStakesName();
             Console.WriteLine($"{contestName} is the name of this Sweepstakes!");
+            return contestName;
+        }
+
+        public void RegisterContestant(Contestant contestant)
+        {
+
+            ui.GetContestantInfo(contestant);
+            Console.WriteLine($"{contestant.ContestantRegistrationNumber} has been registered.");
+
+        }
+
+        public string PickWinner()
+        {
+
         }
     }
 }
