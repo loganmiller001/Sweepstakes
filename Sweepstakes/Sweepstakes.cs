@@ -20,7 +20,7 @@ namespace Sweepstakes
             this.contestName = contestName;
         }
 
-        Dictionary<string, int> contestantDraw = new Dictionary<string, int>();
+        Dictionary<int, object> contestantDraw = new Dictionary<int, object>();
         
 
         public string SweepStakesName(string contestName)
