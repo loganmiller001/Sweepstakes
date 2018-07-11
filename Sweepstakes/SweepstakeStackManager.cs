@@ -21,6 +21,12 @@ namespace Sweepstakes
             sweepstakeStack.Push("SweepStake3");
             sweepstakeStack.Push("SweepStake4");
 
+            Console.WriteLine("Elements in stack: ");
+            foreach(string word in sweepstakeStack)
+            {
+                Console.WriteLine(word);
+            }
+            string topOfStack = sweepstakeStack.Pop();
         }
 
         public Sweepstakes GetSweepstakes()

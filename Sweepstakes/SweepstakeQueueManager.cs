@@ -20,6 +20,14 @@ namespace Sweepstakes
             sweepstakesQueue.Enqueue("Sweepstake2");
             sweepstakesQueue.Enqueue("Sweepstake3");
             sweepstakesQueue.Enqueue("Sweepstake4");
+
+            Console.WriteLine("Elements in queue: ");
+            foreach(string word in sweepstakesQueue)
+            {
+                Console.WriteLine(word);
+            }
+
+            string startOfQueue = sweepstakesQueue.Dequeue();
         }
 
         public Sweepstakes GetSweepstakes()
