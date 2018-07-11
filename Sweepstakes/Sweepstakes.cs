@@ -10,6 +10,7 @@ namespace Sweepstakes
     {
         string contestName;
         public UserInterface ui;
+        Contestant contestant;
         
         
         
@@ -20,6 +21,7 @@ namespace Sweepstakes
         }
 
         Dictionary<string, int> contestantDraw = new Dictionary<string, int>();
+        
 
         public string SweepStakesName(string contestName)
         {
@@ -39,6 +41,15 @@ namespace Sweepstakes
         public string PickWinner()
         {
 
+            
+            string winner = contestant.ContestantRegistrationNumber.ToString();
+            Console.WriteLine($"{winner} has won the drawing!");
+            return winner;
+        }
+
+        public void PrintContestantInfo(Contestant contestant)
+        {
+            ui.GetContestantInfo(contestant);
         }
     }
 }
