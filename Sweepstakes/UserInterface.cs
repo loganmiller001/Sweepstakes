@@ -13,47 +13,68 @@ namespace Sweepstakes
 
         }
 
-         public void GetContestantInfo(Contestant contestant)
+         public static void GetContestantInfo(Contestant contestant, int RegistrationNumber)
         {
-            var person1 = new Contestant(000);
+    
+            var person1 = new Contestant();
+            Console.WriteLine($"Your registration number is: {RegistrationNumber}");
             Console.WriteLine("Please enter the contestant's first name.");
+            person1.ContestantFirstName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter the contestant's last name.");
+            person1.ContestantLastName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter a valid email address.");
-            Console.WriteLine($"Contestant One's user information: {person1.ContestantFirstName}{person1.ContestantLastName}{person1.Email}{person1.ContestantRegistrationNumber}");
-            Console.ReadLine();
+            person1.Email = Console.ReadLine().ToLower();
+            Console.WriteLine($"Contestant One's user information: {person1.ContestantFirstName}, {person1.ContestantLastName}, {person1.Email}, {RegistrationNumber}");
+            Console.ReadLine().ToLower();
 
-            var person2 = new Contestant(001);
+            var person2 = new Contestant();
+            Console.WriteLine($"Your registration number is: {RegistrationNumber}");
             Console.WriteLine("Please enter the contestant's first name.");
+            person2.ContestantFirstName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter the contestant's last name.");
+            person2.ContestantLastName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter a valid email address.");
-            Console.WriteLine($"Contestant Two's user information: {person2.ContestantFirstName}{person2.ContestantLastName}{person2.Email}{person2.ContestantRegistrationNumber}");
-            Console.ReadLine();
+            person2.Email = Console.ReadLine().ToLower();
+            Console.WriteLine($"Contestant Two's user information: {person2.ContestantFirstName}, {person2.ContestantLastName}, {person2.Email}, {RegistrationNumber}");
+            Console.ReadLine().ToLower();
 
-            var person3 = new Contestant(002);
+            var person3 = new Contestant();
+            Console.WriteLine($"Your registration number is: {RegistrationNumber}");
             Console.WriteLine("Please enter the contestant's first name.");
+            person3.ContestantFirstName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter the contestant's last name.");
+            person3.ContestantLastName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter a valid email address.");
-            Console.WriteLine($"Contestant Three's user information: {person3.ContestantFirstName}{person3.ContestantLastName}{person3.Email}{person3.ContestantRegistrationNumber}");
-            Console.ReadLine();
+            person3.Email = Console.ReadLine().ToLower();
+            Console.WriteLine($"Contestant Three's user information: {person3.ContestantFirstName}, {person3.ContestantLastName}, {person3.Email}, {RegistrationNumber}");
+            Console.ReadLine().ToLower();
 
-            var person4 = new Contestant(003);
+            var person4 = new Contestant();
+            Console.WriteLine($"Your registration number is: {RegistrationNumber}");
             Console.WriteLine("Please enter the contestant's first name.");
+            person4.ContestantFirstName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter the contestant's last name.");
+            person4.ContestantLastName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter a valid email address.");
-            Console.WriteLine($"Contestant Fours's user information: {person4.ContestantFirstName}{person4.ContestantLastName}{person4.Email}{person4.ContestantRegistrationNumber}");
-            Console.ReadLine();
+            person4.Email = Console.ReadLine().ToLower();
+            Console.WriteLine($"Contestant Fours's user information: {person4.ContestantFirstName}, {person4.ContestantLastName}, {person4.Email}, {RegistrationNumber}");
+            Console.ReadLine().ToLower();
 
-            var person5 = new Contestant(004);
+            var person5 = new Contestant();
+            Console.WriteLine($"Your registration number is: {RegistrationNumber}");
             Console.WriteLine("Please enter the contestant's first name.");
+            person5.ContestantFirstName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter the contestant's last name.");
+            person5.ContestantLastName = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter a valid email address.");
-            Console.WriteLine($"Contestant Five's user information: {person5.ContestantFirstName}{person5.ContestantLastName}{person5.Email}{person5.ContestantRegistrationNumber}");
-            Console.ReadLine();
+            person5.Email = Console.ReadLine();
+            Console.WriteLine($"Contestant Five's user information: {person5.ContestantFirstName}, {person5.ContestantLastName}, {person5.Email}, {RegistrationNumber}");
+            Console.ReadLine().ToLower();
         }
 
-        public void SweepStakesName()
+        public static void SweepStakesName()
         {
-            var name = new Sweepstakes("");
+            var name = new Sweepstakes("Very Lame Name");
             
         }
 

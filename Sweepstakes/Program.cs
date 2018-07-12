@@ -10,7 +10,15 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            SweepstakeQueueManager newQueue = SweepstakesFactory.CreateQueue();
+
+
+            //SweepstakeQueueManager newQueue = SweepstakesFactory.CreateQueue();
+            //SweepstakeStackManager newStack = SweepstakesFactory.CreateStack();
+
+            
+            Sweepstakes sweepstakes = new Sweepstakes("");
+            sweepstakes.RunContest();
+
 
         }
     }

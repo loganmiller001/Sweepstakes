@@ -9,9 +9,10 @@ namespace Sweepstakes
     public class Sweepstakes:UserInterface
     {
         string contestName;
+        public int RegistrationNumber { get; set; }
         public UserInterface ui;
         Contestant contestant;
-        Dictionary<int, object> contestantDraw = new Dictionary<int, object>();
+        Dictionary<int, Contestant> contestantDraw = new Dictionary<int, Contestant>();
 
 
 
@@ -19,46 +20,52 @@ namespace Sweepstakes
         {
             this.contestName = contestName;
         }
+ 
 
-        public void ContestantDictionary()
-        {
-            Dictionary<int, object> contestantDraw = new Dictionary<int, object>();
-            contestantDraw.Add(000, contestant);
-            contestantDraw.Add(001, contestant);
-            contestantDraw.Add(002, contestant);
-            contestantDraw.Add(003, contestant);
-            contestantDraw.Add(004, contestant);
-
-        }
+        
 
         public string SweepStakesName(string contestName)
         {
-            ui.SweepStakesName();
+            SweepStakesName();
             Console.WriteLine($"{contestName} is the name of this Sweepstakes!");
             return contestName;
         }
 
         public void RegisterContestant(Contestant contestant)
         {
-
-            ui.GetContestantInfo(contestant);
-            Console.WriteLine($"Contestant {contestant.ContestantRegistrationNumber} has been registered.");
+            Contestant constestant = new Contestant();
+            contestant.ContestantRegistrationNumber = RegistrationNumber;
+            GetContestantInfo(contestant, RegistrationNumber);
+            contestantDraw.Add(RegistrationNumber, contestant);
+            RegistrationNumber++;
 
         }
 
         public string PickWinner()
         {
             Random randomRegisterNumber = new Random();
-            contestant.ContestantRegistrationNumber = randomRegisterNumber.Next(000, 004);
+            RegistrationNumber = randomRegisterNumber.Next(0, contestantDraw.Count);
             
-            string winner = contestant.ContestantRegistrationNumber.ToString();
+            string winner = RegistrationNumber.ToString();
             Console.WriteLine($"{winner} has won the drawing!");
             return winner;
         }
 
-        public void PrintContestantInfo(Contestant contestant)
+        public void PrintContestantInfo()
         {
-            ui.GetContestantInfo(contestant);
+            foreach (KeyValuePair<int, Contestant> contestant in contestantDraw)
+            {
+                Console.WriteLine($"Contestant's Information: {contestant.Value.ContestantFirstName}, {contestant.Value.ContestantLastName}, {contestant.Value.Email}, {contestant.Value.ContestantRegistrationNumber},");
+            }
+        }
+
+
+        public void RunContest()
+        {
+            
+            GetContestantInfo(contestant, RegistrationNumber);
+            PrintContestantInfo();
+            PickWinner();
         }
     }
 }
