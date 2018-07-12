@@ -37,6 +37,23 @@ namespace Sweepstakes
             var name = new Sweepstakes("Very Lame Name");
             
         }
-
+        public static void ChooseDataStructure()
+        {
+            Console.WriteLine("Please type if you would like to pull sweepstakes from a stack or queue.");
+            string userInput = Console.ReadLine().ToLower();
+            switch (userInput)
+            {
+                case "stack":
+                    SweepstakeStackManager newStack = SweepstakesFactory.CreateStack();
+                    break;
+                case "queue":
+                    SweepstakeQueueManager newQueue = SweepstakesFactory.CreateQueue();
+                    break;
+                default:
+                    Console.WriteLine("incorrect input, please try again.");
+                    ChooseDataStructure();
+                    break;
+            }
+        }
     }
 }

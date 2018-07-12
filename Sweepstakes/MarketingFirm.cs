@@ -15,7 +15,12 @@ namespace Sweepstakes
     }
         public class SweepstakesManager
         {
-         
+            public static void BeginProgram()
+        {
+            UserInterface.ChooseDataStructure();
+        }
+
+
         }
 
     

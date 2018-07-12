@@ -16,10 +16,10 @@ namespace Sweepstakes
         public static void Stack()
         {
             Stack<string> sweepstakeStack = new Stack<string>();
-            sweepstakeStack.Push("SweepStake4");
-            sweepstakeStack.Push("SweepStake3");
-            sweepstakeStack.Push("SweepStake2");
-            sweepstakeStack.Push("SweepStake1");
+            sweepstakeStack.Push("SweepStake8");
+            sweepstakeStack.Push("SweepStake7");
+            sweepstakeStack.Push("SweepStake6");
+            sweepstakeStack.Push("SweepStake5");
 
             Console.WriteLine("Elements in stack: ");
             foreach(string word in sweepstakeStack)
