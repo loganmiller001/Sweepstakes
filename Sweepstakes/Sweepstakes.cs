@@ -26,18 +26,24 @@ namespace Sweepstakes
 
         public string SweepStakesName(string contestName)
         {
-            SweepStakesName();
+            GetSweepStakesName();
             Console.WriteLine($"{contestName} is the name of this Sweepstakes!");
             return contestName;
         }
 
         public void RegisterContestant(Contestant contestant)
         {
-            Contestant constestant = new Contestant();
-            contestant.ContestantRegistrationNumber = RegistrationNumber;
-            GetContestantInfo(contestant, RegistrationNumber);
-            contestantDraw.Add(RegistrationNumber, contestant);
-            
+            int contestants;
+            for (contestants = 0; contestants < 4; contestants++)
+            {
+
+                Contestant constestant = new Contestant();
+                contestant.ContestantRegistrationNumber = RegistrationNumber;
+                GetContestantInfo(contestant, RegistrationNumber);
+                contestantDraw.Add(RegistrationNumber, contestant);
+                RegistrationNumber++;
+            }
+
 
         }
 
@@ -54,9 +60,11 @@ namespace Sweepstakes
 
         public void PrintContestantInfo()
         {
+            
+
             foreach (KeyValuePair<int, Contestant> contestant in contestantDraw)
             {
-                Console.WriteLine($"Contestant's Information: {contestant.Value.ContestantFirstName}, {contestant.Value.ContestantLastName}, {contestant.Value.Email}, {contestant.Value.ContestantRegistrationNumber},");
+                Console.WriteLine($"Contestant's Information: {contestant.Value.ContestantFirstName}, {contestant.Value.ContestantLastName}, {contestant.Value.Email}, {RegistrationNumber},");
                 Console.ReadKey();
             }
         }
@@ -64,10 +72,12 @@ namespace Sweepstakes
 
         public void RunContest(Contestant contestant)
         {
-
+            
             RegisterContestant(contestant);
             PrintContestantInfo();
             PickWinner();
+            Console.ReadLine();
         }
+
     }
 }

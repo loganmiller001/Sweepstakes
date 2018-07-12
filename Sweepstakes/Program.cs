@@ -12,8 +12,8 @@ namespace Sweepstakes
         {
 
 
-            //SweepstakeQueueManager newQueue = SweepstakesFactory.CreateQueue();
-            //SweepstakeStackManager newStack = SweepstakesFactory.CreateStack();
+            SweepstakeQueueManager newQueue = SweepstakesFactory.CreateQueue();
+            SweepstakeStackManager newStack = SweepstakesFactory.CreateStack();
 
             Contestant contestant = new Contestant();
             Sweepstakes sweepstakes = new Sweepstakes("");
