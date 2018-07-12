@@ -10,6 +10,8 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
+            SweepstakeQueueManager newQueue = SweepstakesFactory.CreateQueue();
+
         }
     }
 }

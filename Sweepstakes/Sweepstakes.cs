@@ -11,17 +11,25 @@ namespace Sweepstakes
         string contestName;
         public UserInterface ui;
         Contestant contestant;
-        
-        
-        
+        Dictionary<int, object> contestantDraw = new Dictionary<int, object>();
+
+
 
         public Sweepstakes(string contestName)
         {
             this.contestName = contestName;
         }
 
-        Dictionary<int, object> contestantDraw = new Dictionary<int, object>();
-        
+        public void ContestantDictionary()
+        {
+            Dictionary<int, object> contestantDraw = new Dictionary<int, object>();
+            contestantDraw.Add(000, contestant);
+            contestantDraw.Add(001, contestant);
+            contestantDraw.Add(002, contestant);
+            contestantDraw.Add(003, contestant);
+            contestantDraw.Add(004, contestant);
+
+        }
 
         public string SweepStakesName(string contestName)
         {

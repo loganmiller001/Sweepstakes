@@ -11,7 +11,7 @@ namespace Sweepstakes
 
         public SweepstakeQueueManager()
         {
-
+            Queue();
         }
         public static void Queue()
         {

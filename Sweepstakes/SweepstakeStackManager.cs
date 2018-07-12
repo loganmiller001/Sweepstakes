@@ -11,7 +11,7 @@ namespace Sweepstakes
 
         public SweepstakeStackManager()
         {
-
+            Stack();
         }
         public static void Stack()
         {
