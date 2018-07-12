@@ -11,13 +11,13 @@ namespace Sweepstakes
         string contestName;
         public int RegistrationNumber { get; set; }
         public UserInterface ui;
-        Contestant contestant;
         Dictionary<int, Contestant> contestantDraw = new Dictionary<int, Contestant>();
 
 
 
         public Sweepstakes(string contestName)
         {
+           
             this.contestName = contestName;
         }
  
@@ -37,7 +37,7 @@ namespace Sweepstakes
             contestant.ContestantRegistrationNumber = RegistrationNumber;
             GetContestantInfo(contestant, RegistrationNumber);
             contestantDraw.Add(RegistrationNumber, contestant);
-            RegistrationNumber++;
+            
 
         }
 
@@ -48,6 +48,7 @@ namespace Sweepstakes
             
             string winner = RegistrationNumber.ToString();
             Console.WriteLine($"{winner} has won the drawing!");
+            Console.ReadLine();
             return winner;
         }
 
@@ -56,14 +57,15 @@ namespace Sweepstakes
             foreach (KeyValuePair<int, Contestant> contestant in contestantDraw)
             {
                 Console.WriteLine($"Contestant's Information: {contestant.Value.ContestantFirstName}, {contestant.Value.ContestantLastName}, {contestant.Value.Email}, {contestant.Value.ContestantRegistrationNumber},");
+                Console.ReadKey();
             }
         }
 
 
-        public void RunContest()
+        public void RunContest(Contestant contestant)
         {
-            
-            GetContestantInfo(contestant, RegistrationNumber);
+
+            RegisterContestant(contestant);
             PrintContestantInfo();
             PickWinner();
         }
