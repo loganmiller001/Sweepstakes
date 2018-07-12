@@ -18,12 +18,12 @@ namespace Sweepstakes
             
             Console.WriteLine($"Your registration number is: {RegistrationNumber}");
             Console.WriteLine("Please enter the contestant's first name.");
-            contestant.ContestantFirstName = Console.ReadLine();
+            contestant.FirstName = Console.ReadLine();
             Console.WriteLine("Please enter the contestant's last name.");
-            contestant.ContestantLastName = Console.ReadLine();
+            contestant.LastName = Console.ReadLine();
             Console.WriteLine("Please enter a valid email address.");
-            contestant.Email = Console.ReadLine();
-            Console.WriteLine($"Contestant's user information: {contestant.ContestantFirstName}, {contestant.ContestantLastName}, {contestant.Email}, {RegistrationNumber}");
+            contestant.EmailAddress = Console.ReadLine();
+            Console.WriteLine($"Contestant's user information: {contestant.FirstName}, {contestant.LastName}, {contestant.EmailAddress}, {RegistrationNumber}");
             Console.ReadLine().ToLower();
             
 

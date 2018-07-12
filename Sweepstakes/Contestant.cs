@@ -8,10 +8,10 @@ namespace Sweepstakes
 {
     public class Contestant
     {
-        int registrationNumber;
-        string firstName;
-        string lastName;
-        string emailAddress;
+        public int RegistrationNumber { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string EmailAddress { get; set; }
 
 
         public Contestant()
@@ -19,28 +19,5 @@ namespace Sweepstakes
             
         }
 
-        public string Email
-        {
-            get => emailAddress;
-            set => emailAddress = value;
-
-        }
-        public string ContestantFirstName
-        {
-            get => firstName;
-            set => firstName = value;
-        }
-
-        public string ContestantLastName
-        {
-            get => lastName;
-            set => lastName = value;
-        }
-
-        public int ContestantRegistrationNumber
-        {
-            get => registrationNumber;
-            set => registrationNumber = value;
-        }
     }
 }

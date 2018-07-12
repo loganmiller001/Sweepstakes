@@ -12,8 +12,8 @@ namespace Sweepstakes
         {
 
 
-            
-            
+
+
 
             Contestant contestant = new Contestant();
             Sweepstakes sweepstakes = new Sweepstakes("");

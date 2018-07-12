@@ -17,7 +17,7 @@ namespace Sweepstakes
 
         public Sweepstakes(string contestName)
         {
-           
+            
             this.contestName = contestName;
         }
  
@@ -38,7 +38,7 @@ namespace Sweepstakes
             {
 
                 Contestant constestant = new Contestant();
-                contestant.ContestantRegistrationNumber = RegistrationNumber;
+                contestant.RegistrationNumber = RegistrationNumber;
                 GetContestantInfo(contestant, RegistrationNumber);
                 contestantDraw.Add(RegistrationNumber, contestant);
                 RegistrationNumber++;
@@ -64,7 +64,7 @@ namespace Sweepstakes
 
             foreach (KeyValuePair<int, Contestant> contestant in contestantDraw)
             {
-                Console.WriteLine($"Contestant's Information: {contestant.Value.ContestantFirstName}, {contestant.Value.ContestantLastName}, {contestant.Value.Email}, {RegistrationNumber},");
+                Console.WriteLine($"Contestant's Information: {contestant.Value.FirstName}, {contestant.Value.LastName}, {contestant.Value.EmailAddress}, {RegistrationNumber},");
                 Console.ReadKey();
             }
         }
