@@ -55,5 +55,23 @@ namespace Sweepstakes
                     break;
             }
         }
+
+        public static void EndProgram()
+        {
+            Console.WriteLine("Would you like to end the program? Type 'yes' or 'no'. ");
+            string userInput = Console.ReadLine().ToLower();
+            switch (userInput)
+            {
+                case "yes":
+                    Environment.Exit(0);
+                    break;
+                case "no":
+                    SweepstakesManager.BeginProgram();
+                    break;
+                default:
+                    Console.WriteLine("Incorrect input. Please type 'yes' or 'no'. ");
+                    break;
+            }
+        }
     }
 }

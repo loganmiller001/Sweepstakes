@@ -19,7 +19,7 @@ namespace Sweepstakes
             Sweepstakes sweepstakes = new Sweepstakes("");
             SweepstakesManager.BeginProgram();
             sweepstakes.RunContest(contestant);
-
+            UserInterface.EndProgram();
 
         }
     }
